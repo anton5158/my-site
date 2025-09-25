@@ -13,7 +13,7 @@ import CartItemList from './CartItemList.vue'
       <div class="flex gap-2">
         <span>Итого:</span>
         <div class="flex-1 border-b border-dashed"></div>
-        <b>48000 ₽</b>
+        <b>{{ cart.reduce((acc, item) => acc + item.price, 0) }} ₽</b>
       </div>
       <button
         disabled=""
